@@ -1,8 +1,19 @@
-var express = require('express'),
-  app = express(),
-  port = process.env.PORT || 3000;
+const express = require('express');
 
-app.listen(port);
+const port = process.env.PORT || 4000;
+const app = express();
 
-console.log('todo list RESTful API server started on: ' + port);
+app.use(express.json());
 
+
+
+
+
+
+const router = require("./apps/platform/routes");
+
+app.use(router);
+
+app.listen(port, () => monitoring.log(`API listening on port ${port}!`));
+
+module.exports = app;
