@@ -5,7 +5,7 @@ const { BAD_REQUEST, ERROR } = require("~root/constants/HttpStatusCodes");
 
 const GENERIC_ERROR_MESSAGE = "API Error";
 
-const handleAPIError = (res, err, statusCode = ERROR) => {
+const handleApiError = (res, err, statusCode = ERROR) => {
   if (!(err instanceof ValidationError)) {
     monitoring.error(err);
     res.status(statusCode);
@@ -16,4 +16,4 @@ const handleAPIError = (res, err, statusCode = ERROR) => {
   res.send(parseYupError(err));
 };
 
-module.exports = handleAPIError;
+module.exports = handleApiError;

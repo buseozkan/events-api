@@ -1,5 +1,5 @@
 const createUser = require("~root/actions/users/createUser")
-const handleApiError = require("
+const handleApiError = require("../../../../../utils/handleApiError")
 
 const postUser = async (req, res) => {
   const {
