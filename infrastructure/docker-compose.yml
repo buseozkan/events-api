@@ -1,0 +1,27 @@
+version: "3.3"
+services:
+  cc-db:
+    container_name: cc-mysql-db
+    image: mysql:5.7
+    restart: always
+    command: --sql_mode="NO_ENGINE_SUBSTITUTION"
+    environment:
+      MYSQL_DATABASE: "gibriEvents_db"
+      MYSQL_USER: "user"
+      MYSQL_PASSWORD: "password"
+      MYSQL_ROOT_PASSWORD: "password"
+    ports:
+      - "3306:3306"
+    expose:
+      - "3306"
+    volumes:
+      - my-cc-db:/var/lib/mysql
+  cc-auth0-mock:
+    container_name: cc-auth-server
+    build:
+      context: auth0-mock
+      dockerfile: Dockerfile
+    ports:
+      - 8088:8088
+volumes:
+  my-cc-db:
