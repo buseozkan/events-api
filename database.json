@@ -1,11 +1,11 @@
 {
-"dev": {
+  "dev": {
     "driver": "mysql",
-    "host": "localhost",
-    "port": "4000",
+    "host": "127.0.0.1",
+    "port": "3306",
     "user": "root",
-    "password": "Password",
-    "database": "eventApp_db",
+    "password": "password",
+    "database": "gibriEvents_db",
     "multipleStatements": true
   },
   "sql-file": true,
