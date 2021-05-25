@@ -26,9 +26,9 @@ VALUES ("3","Bob Ross Drawing Night", "3", "2020-08-20", Mağusa Z Bar);
 
 
 INSERT INTO event_histories (event_history_id, host_id, user_id, event_id, event_name, event_date)
-VALUES("1","2","2","1","Bob Dylan Tribute Night","2020-07-20")
+VALUES("1","2","2","1","Bob Dylan Tribute Night","2020-07-20");
 INSERT INTO event_histories (event_history_id, host_id, user_id, event_id, event_name, event_date)
-VALUES("2","1","3","1","Bob Marley Tribute Night","2020-09-20")
+VALUES("2","1","3","1","Bob Marley Tribute Night","2020-09-20");
 INSERT INTO event_histories (event_history_id, host_id, user_id, event_id, event_name, event_date)
-VALUES("3","3","1","3","Bob Ross Drawing Night","2020-08-20")
+VALUES("3","3","1","3","Bob Ross Drawing Night","2020-08-20");
 
