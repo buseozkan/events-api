@@ -1,4 +1,5 @@
-const createUser = require("~root/actions/users/createUser")
+/* eslint-disable no-undef */
+const createUser = require("../../../../actions/user/createUser/queries/createUser");
 const handleApiError = require("../../../../../utils/handleApiError")
 
 const postUser = async (req, res) => {
@@ -6,7 +7,9 @@ const postUser = async (req, res) => {
     firstName,
     lastName,
     email,
-    password
+    password,
+    city,
+    phoneNumber
   } = req.body;
 
   try {
@@ -14,14 +17,16 @@ const postUser = async (req, res) => {
       firstName,
       lastName,
       email,
-      password
+      password,
+      city,
+      phoneNumber
     });
 
     res.status(201).send({
       user
     });
   } catch (err) {
-    handleApiError(res, err);
+    handleAPIError(res, err);
   }
 };
 
