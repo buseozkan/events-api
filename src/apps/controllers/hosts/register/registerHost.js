@@ -1,4 +1,5 @@
-const createUser = require("~root/actions/users/createUser");
+/* eslint-disable no-undef */
+const createUser = require("../../../../actions/user/createUser/queries/createUser");
 const handleApiError = require("../../../../../utils/handleApiError");
 
 const postUser = async (req, res) => {
