@@ -1,5 +1,5 @@
 const express = require("express");
-//getEvents (req)
+const getEvents = require("../events/getEvent/index");
 
 const router = express.Router();
 
