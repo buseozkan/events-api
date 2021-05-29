@@ -8,3 +8,5 @@ const router = express.Router();
 router.get("/getEvents", getEvents);
 router.get("/getArtistName", getArtistName);
 router.get("/getEventCity", getEventCity);
+
+module.exports = router;
