@@ -14,7 +14,6 @@ const selectEvent = ({ slug }) => submitQuery`
       host_id, 
       image, 
       slug
-
     FROM events 
     LEFT JOIN users ON events.host_id = hosts.host_id
     WHERE slug = ${slug}
