@@ -1,4 +1,4 @@
-const insertUser = require("./queries/insertUser");
+const insertUser = require("./insertUser");
 
 const createUser = async ({
   firstName,
