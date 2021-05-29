@@ -5,7 +5,7 @@ const cors = require("cors");
 const rateLimit = require("express-rate-limit");
 const compression = require("compression");
 const morgan = require("morgan");
-const monitoring = require("~root/utils/monitoring");
+const monitoring = require("../utils/monitoring");
 // prevent running against production database by mistake
 require("~root/utils/exitIfProductionDatabase")();
 

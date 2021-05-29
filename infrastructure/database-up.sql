@@ -45,6 +45,7 @@ CREATE TABLE events(
     event_name VARCHAR(100) NOT NULL,
     host_id int NOT NULL,
     event_date DATETIME NOT NULL,
+    event_description VARCHAR(200),
     address VARCHAR(50),
     FOREIGN KEY (host_id) REFERENCES hosts(host_id)
 );
