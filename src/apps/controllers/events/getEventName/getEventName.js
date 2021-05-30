@@ -5,7 +5,7 @@ const getEventName = async (req, res) => {
   const { slug } = req.params;
   try {
     const { name } = await fetchEvent({ slug });
-    res.send({ city });
+    res.send({ name });
   } catch (err) {
     handleApiError(res, err);
   }
