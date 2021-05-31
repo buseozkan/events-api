@@ -1,9 +1,9 @@
-const selectEvents = require("./queries/selectEvents");
+const selectVenues = require("./queries/selectEvents");
 
-const fetchEvents = async () => {
-  const events = await selectEvents();
+const fetchVenues = async () => {
+  const venues = await selectEvents();
 
-  return { events };
+  return { venues };
 };
 
-module.exports = fetchEvents;
+module.exports = fetchVenues;
