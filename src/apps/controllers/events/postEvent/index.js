@@ -1,31 +1,26 @@
-const createEvent = require("../createEvent/queries/index");
-const handleApiError = require("../../../../../utils/handleApiError/index");
+const createEvent = require("~root/actions/event/createEvent/index");
+const handleApiError = require("~root/utils/handleApiError/index");
 
 const postEvent = async (req, res) => {
-  const host_id = 1;
   const {
-    event_id,
     event_name,
     event_artist,
     host_id,
     event_date,
     event_city,
     event_description,
-    address,
-    slug
+    address
   } = req.body;
 
   try {
     const { event } = await createEvent({
-      event_id,
       event_name,
       event_artist,
       host_id,
       event_date,
       event_city,
       event_description,
-      address,
-      slug
+      address
     });
     res.send({
       event

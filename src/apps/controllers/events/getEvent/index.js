@@ -1,4 +1,4 @@
-const handleApiError = require("../../../../../utils/handleApiError");
+const handleApiError = require("~root/utils//handleApiError");
 const fetchEvent = require("../fetchEvent/index");
 
 const getEvent = async (req, res) => {

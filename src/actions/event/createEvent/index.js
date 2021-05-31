@@ -1,26 +1,22 @@
-const insertEvent = require("./queries/insertBlog");
+const insertEvent = require("../createEvent/queries/insertEvent");
 
 const createEvent = async ({
-  event_id,
   event_name,
   event_artist,
   host_id,
   event_date,
   event_city,
   event_description,
-  address,
-  slug
+  address
 }) => {
-  const blog = await insertEvent({
-    event_id,
+  const event = await insertEvent({
     event_name,
     event_artist,
     host_id,
     event_date,
     event_city,
     event_description,
-    address,
-    slug
+    address
   });
 
   return { event };
