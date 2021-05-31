@@ -1,11 +1,11 @@
-const removeBlog = require("~root/actions/blogs/removeBlog");
-const handleApiError = require("../../../../../utils/handleApiError/index");
+const removeEvent = require("~root/actions/blogs/removeBlog");
+const handleApiError = require("~root/utils/handleApiError");
 
 const deleteEvent = async (req, res) => {
   const { slug } = req.params;
 
   try {
-    const { blog } = await removeBlog({ slug });
+    const { blog } = await removeEvent({ slug });
     res.send({
       blog
     });

@@ -6,7 +6,7 @@ const insertHost = ({
   email,
   password,
   city,
-  phoneNumber,
+  phoneNumber
 }) => submitQuery`
     INSERT INTO users (        
       first_name,
@@ -14,7 +14,7 @@ const insertHost = ({
       email,
       password,
       city,
-      phone_number,
+      phone_number
     )
     VALUES 
     (${firstName},${lastName},${email},SHA2(CONCAT(${password},${process.env.PASSWORD_SALT}), 224),${city},${phoneNumber})

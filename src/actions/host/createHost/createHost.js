@@ -1,4 +1,4 @@
-const insertHost= require("./queries/insertHost");
+const insertHost = require("./queries/insertHost");
 
 const createHost = async ({
   firstName,

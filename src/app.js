@@ -5,7 +5,7 @@ const cors = require("cors");
 const rateLimit = require("express-rate-limit");
 const compression = require("compression");
 const morgan = require("morgan");
-const monitoring = require("../utils/monitoring");
+const monitoring = require("~root/utils/monitoring");
 // prevent running against production database by mistake
 require("~root/utils/exitIfProductionDatabase")();
 
@@ -29,7 +29,7 @@ if (process.env.APP_ENVIRONMENT === "PRODUCTION") {
   app.use(limiter);
 }
 
-const router = require("./apps/platform/routes");
+const router = require("~root/routes/index");
 
 app.use(router);
 
