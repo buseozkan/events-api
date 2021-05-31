@@ -9,12 +9,12 @@ CREATE DATABASE /*!32312 IF NOT EXISTS*/ `gibriEvents_db` DEFAULT CHARSET = utf8
 USE `gibriEvents_db`;
 
 
-# SET FOREIGN_KEY_CHECKS=0;
-# DROP TABLE hosts;
-# DROP TABLE users;
-# DROP TABLE events;
-# DROP TABLE event_histories;
-# SET FOREIGN_KEY_CHECKS=1;
+SET FOREIGN_KEY_CHECKS=0;
+DROP TABLE hosts;
+DROP TABLE users;
+DROP TABLE events;
+DROP TABLE event_histories;
+SET FOREIGN_KEY_CHECKS=1;
 
 
 DROP TABLE IF EXISTS hosts;

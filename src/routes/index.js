@@ -1,4 +1,5 @@
 const express = require("express");
+const deleteEvent = require("../apps/controllers/events/deleteEvent");
 /*const getEvents = require("../apps/controllers/events/getEvent/index");
 const getArtistName = require("../events/getArtistName/getArtistName");
 const getEventCity = require("../events/getEventCity/getEventCity");
@@ -13,6 +14,6 @@ router.get("/getEventCity", getEventCity);
 router.get("/getEventName", getEventName);*/
 
 router.post("/postEvent", postEvent);
-//router.delete("/deleteEvent", deleteEvent);
+router.delete("/deleteEvent/:eventId", deleteEvent);
 
 module.exports = router;

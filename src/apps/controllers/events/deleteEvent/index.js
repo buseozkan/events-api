@@ -1,13 +1,13 @@
-const removeEvent = require("~root/actions/blogs/removeBlog");
+const removeEvent = require("~root/actions/event/removeEvent");
 const handleApiError = require("~root/utils/handleApiError");
 
 const deleteEvent = async (req, res) => {
-  const { slug } = req.params;
+  const { eventId } = req.params;
 
   try {
-    const { blog } = await removeEvent({ slug });
+    const { deletedEvent } = await removeEvent({ eventId });
     res.send({
-      blog
+      deletedEvent
     });
   } catch (err) {
     handleApiError(res, err);
