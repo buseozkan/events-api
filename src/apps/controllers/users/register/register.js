@@ -9,7 +9,9 @@ const postUser = async (req, res) => {
       firstName,
       lastName,
       email,
-      password
+      password,
+      city,
+      phoneNumber
     });
 
     res.status(201).send({
