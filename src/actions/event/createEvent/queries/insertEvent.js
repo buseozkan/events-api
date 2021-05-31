@@ -3,7 +3,7 @@ const { submitQuery } = require("~root/lib/database");
 const insertEvent = ({
   event_name,
   event_artist,
-  host_id,
+  venue_id,
   event_date,
   event_city,
   event_description,
@@ -13,14 +13,14 @@ const insertEvent = ({
         
         event_name,
         event_artist,
-        host_id,  
+        venue_id,  
         event_date,
         event_city,
         event_description,
         address
       
     )
-    VALUES(${event_name},${event_artist},${host_id},${event_date},${event_city},${event_description},${address})
+    VALUES(${event_name},${event_artist},${venue_id},${event_date},${event_city},${event_description},${address})
 `;
 
 module.exports = insertEvent;

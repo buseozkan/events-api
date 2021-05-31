@@ -1,7 +1,6 @@
 const { submitQuery, camelKeys } = require("~root/lib/database");
-const selectEvents = () => submitQuery`
-      SELECT 
-        event_id, 
+const selectEvent = ({ eventId }) => submitQuery`
+      SELECT  
         event_name,
         event_artist,
         event_city,
@@ -11,5 +10,7 @@ const selectEvents = () => submitQuery`
         image
       
       FROM events 
+        WHERE event_id = ${eventId}
+    
   `;
-module.exports = camelKeys(selectEvents);
+module.exports = camelKeys(selectEvent);

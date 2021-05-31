@@ -5,7 +5,7 @@ const postEvent = async (req, res) => {
   const {
     event_name,
     event_artist,
-    host_id,
+    venue_id,
     event_date,
     event_city,
     event_description,
@@ -16,7 +16,7 @@ const postEvent = async (req, res) => {
     const { event } = await createEvent({
       event_name,
       event_artist,
-      host_id,
+      venue_id,
       event_date,
       event_city,
       event_description,

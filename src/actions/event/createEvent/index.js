@@ -3,7 +3,7 @@ const insertEvent = require("../createEvent/queries/insertEvent");
 const createEvent = async ({
   event_name,
   event_artist,
-  host_id,
+  venue_id,
   event_date,
   event_city,
   event_description,
@@ -12,7 +12,7 @@ const createEvent = async ({
   const event = await insertEvent({
     event_name,
     event_artist,
-    host_id,
+    venue_id,
     event_date,
     event_city,
     event_description,
