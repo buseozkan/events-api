@@ -1,5 +1,5 @@
 const handleApiError = require("../../../../../utils/handleApiError");
-const fetchEvent = require("../fetchEvent/index");
+const fetchEvent = require("../getEvents/index");
 
 const getEventCity = async (req, res) => {
   const { slug } = req.params;
