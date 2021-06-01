@@ -9,11 +9,13 @@ const getVenue = require("../apps/controllers/venues/getVenue");
 const router = express.Router();
 
 router.get("/events", getEvents);
-router.get("/event/:eventId", getEvent);
+router.get("/events/:eventId", getEvent);
 router.get("/venues", getVenues);
 router.get("/venue/:venueId", getVenue);
 
-router.post("/postEvent", postEvent);
+router.post("/event/:eventId", postEvent);
+router.post("/venues/venueId", postVenue);
+
 router.delete("/deleteEvent/:eventId", deleteEvent);
 
 module.exports = router;
