@@ -9,7 +9,7 @@ const login = async (req, res) => {
 
   if (user) {
     const accessToken = jwt.sign({ ...user }, process.env.JWT_SECRET, {
-      expiresIn: "365d" // 1 year
+      expiresIn: "5y" // 5 year
     });
 
     res.json({

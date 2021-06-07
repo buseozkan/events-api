@@ -1,8 +1,8 @@
 const insertVenue = require("./queries/insertVenue");
+const insertUserVenue = require("./queries/insertUserVenue");
 
 const createVenue = async ({
   venue_type,
-  venue_id,
   name,
   description,
   city,
@@ -15,7 +15,6 @@ const createVenue = async ({
 }) => {
   const venue = await insertVenue({
     venue_type,
-    venue_id,
     name,
     description,
     city,
@@ -25,6 +24,12 @@ const createVenue = async ({
     instagram,
     twitter,
     image
+  });
+
+  const userVenue = await insertUserVenue({
+    userVenueId,
+    userId,
+    venueId: venue.venue_id
   });
 
   return { venue };

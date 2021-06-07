@@ -1,9 +1,9 @@
 const insertEvent = require("../createEvent/queries/insertEvent");
 
 const createEvent = async ({
-  event_name,
-  event_artist,
-  venue_id,
+  eventName,
+  eventArtist,
+  venueId,
   event_date,
   event_city,
   event_description,

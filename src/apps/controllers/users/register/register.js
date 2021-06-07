@@ -1,11 +1,20 @@
-const createUser = require("~root/actions/users/createUser");
+const createUser = require("~root/actions/user/createUser");
 const handleApiError = require("~root/utils/handleApiError");
 
 const postUser = async (req, res) => {
-  const { firstName, lastName, email, password } = req.body;
+  const {
+    userType,
+    firstName,
+    lastName,
+    email,
+    password,
+    city,
+    phoneNumber
+  } = req.body;
 
   try {
     const { user } = await createUser({
+      userType,
       firstName,
       lastName,
       email,

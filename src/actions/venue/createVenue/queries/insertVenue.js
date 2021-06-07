@@ -1,7 +1,7 @@
 const { submitQuery, getInsertId } = require("~root/lib/database");
 
 const insertVenue = ({
-  venue_type,
+  venue_type, //camelCase
   venue_id,
   name,
   description,

@@ -35,11 +35,11 @@ USE `gibriEvents_db`;
 #VALUES("3","3","1","3","Bob Ross Drawing Night","2020-08-20");
 
 #INSERT INTO user_types(user_venue_id,type)
-#VALUES(1,1)
+#VALUES(1,"Admin")
 #INSERT INTO user_types(user_venue_id,type)
-#VALUES(2,2)
+#VALUES(2,"Guest")
 #INSERT INTO user_types(user_venue_id,type)
-#VALUES(3,3)
+#VALUES(3,"Admin")
 
 #INSERT INTO user_venues(user_venue_id,user_type_id,type)
 #VALUES(1,1,"restaurant")

@@ -3,12 +3,12 @@ const handleApiError = require("~root/utils/handleApiError/index");
 
 const postVenue = async (req, res) => {
   const {
-    venue_type,
+    venueType,
     name,
     description,
     city,
-    phone_number,
-    work_hours,
+    phoneNumber,
+    workHours,
     facebook,
     instagram,
     twitter,
@@ -17,12 +17,12 @@ const postVenue = async (req, res) => {
 
   try {
     const { venue } = await createVenue({
-      venue_type,
+      venueType,
       name,
       description,
       city,
-      phone_number,
-      work_hours,
+      phoneNumber,
+      workHours,
       facebook,
       instagram,
       twitter,

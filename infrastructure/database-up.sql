@@ -81,6 +81,9 @@ DROP TABLE IF EXISTS user_venues;
 CREATE TABLE user_venues(
     user_venue_id int AUTO_INCREMENT PRIMARY KEY,
     user_type_id int NOT NULL,
-    type VARCHAR(200) NOT NULL,
-    FOREIGN KEY (user_type_id) REFERENCES user_types(user_type_id)    
+    venue_id int NOT NULL,
+    user_id int NOT NULL,
+    FOREIGN KEY (user_type_id) REFERENCES user_types(user_type_id) 
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
+    FOREIGN KEY (venue_id) REFERENCES venues(venue_id)
 );

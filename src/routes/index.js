@@ -7,6 +7,9 @@ const getVenues = require("../apps/controllers/venues/getVenues");
 const getVenue = require("../apps/controllers/venues/getVenue");
 const postVenue = require("../apps/controllers/venues/postVenue");
 const deleteVenue = require("../apps/controllers/venues/deleteVenue");
+const login = require("../apps/controllers/users/login/login");
+const register = require("../apps/controllers/users/register/register");
+const auth = require("~root/apps/middlewares/authentication");
 
 const router = express.Router();
 
@@ -15,10 +18,13 @@ router.get("/events/:eventId", getEvent);
 router.get("/venues", getVenues);
 router.get("/venue/:venueId", getVenue);
 
-router.post("/event/:eventId", postEvent);
+router.post("/event", auth, postEvent);
 router.post("/venues/:venueId", postVenue);
 
-router.delete("/deleteEvent/:eventId", deleteEvent);
-router.delete("/deleteVenue/:venueId", deleteVenue);
+router.delete("/deleteEvent/:eventId", auth, deleteEvent);
+router.delete("/deleteVenue/:venueId", auth, deleteVenue);
+
+router.post("/login", login);
+router.post("/register", register);
 
 module.exports = router;
