@@ -1,4 +1,4 @@
-const createVenue = require("~root/actions/event/createEvent/index");
+const createVenue = require("~root/actions/venue/createVenue/index");
 const handleApiError = require("~root/utils/handleApiError/index");
 
 const postVenue = async (req, res) => {

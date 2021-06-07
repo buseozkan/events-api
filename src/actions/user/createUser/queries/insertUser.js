@@ -1,23 +1,27 @@
 const { submitQuery, getInsertId } = require("~root/lib/database");
 
 const insertUser = ({
-  firstName,
-  lastName,
+  user_id,
+  user_type,
+  first_name,
+  last_name,
   email,
   password,
   city,
-  phoneNumber,
+  phone_number
 }) => submitQuery`
     INSERT INTO users (        
+      user_id,
+      user_type,
       first_name,
       last_name,
       email,
       password,
       city,
-      phone_number,
+      phone_number
     )
     VALUES 
-    (${firstName},${lastName},${email},SHA2(CONCAT(${password},${process.env.PASSWORD_SALT}), 224),${city},${phoneNumber})
+    (${user_id},${user_type},${first_name},${last_name},${email},SHA2(CONCAT(${password},${process.env.PASSWORD_SALT}), 224),${city},${phone_number})
        
 `;
 

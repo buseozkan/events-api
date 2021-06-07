@@ -5,6 +5,8 @@ const getEvent = require("../apps/controllers/events/getEvent");
 const postEvent = require("../apps/controllers/events/postEvent");
 const getVenues = require("../apps/controllers/venues/getVenues");
 const getVenue = require("../apps/controllers/venues/getVenue");
+const postVenue = require("../apps/controllers/venues/postVenue");
+const deleteVenue = require("../apps/controllers/venues/deleteVenue");
 
 const router = express.Router();
 
@@ -14,8 +16,9 @@ router.get("/venues", getVenues);
 router.get("/venue/:venueId", getVenue);
 
 router.post("/event/:eventId", postEvent);
-router.post("/venues/venueId", postVenue);
+router.post("/venues/:venueId", postVenue);
 
 router.delete("/deleteEvent/:eventId", deleteEvent);
+router.delete("/deleteVenue/:venueId", deleteVenue);
 
 module.exports = router;
