@@ -4,18 +4,18 @@ const createEvent = async ({
   eventName,
   eventArtist,
   venueId,
-  event_date,
-  event_city,
-  event_description,
+  eventDate,
+  eventCity,
+  eventDescription,
   address
 }) => {
   const event = await insertEvent({
-    event_name,
-    event_artist,
-    venue_id,
-    event_date,
-    event_city,
-    event_description,
+    eventName,
+    eventArtist,
+    venueId,
+    eventDate,
+    eventCity,
+    eventDescription,
     address
   });
 

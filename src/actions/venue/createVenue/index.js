@@ -2,24 +2,24 @@ const insertVenue = require("./queries/insertVenue");
 const insertUserVenue = require("./queries/insertUserVenue");
 
 const createVenue = async ({
-  venue_type,
+  venueType,
   name,
   description,
   city,
-  phone_number,
-  work_hours,
+  phoneNumber,
+  workHours,
   facebook,
   instagram,
   twitter,
   image
 }) => {
   const venue = await insertVenue({
-    venue_type,
+    venueType,
     name,
     description,
     city,
-    phone_number,
-    work_hours,
+    phoneNumber,
+    workHours,
     facebook,
     instagram,
     twitter,
