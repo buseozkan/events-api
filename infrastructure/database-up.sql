@@ -83,7 +83,7 @@ CREATE TABLE user_venues(
     user_type_id int NOT NULL,
     venue_id int NOT NULL,
     user_id int NOT NULL,
-    FOREIGN KEY (user_type_id) REFERENCES user_types(user_type_id) 
-    FOREIGN KEY (user_id) REFERENCES users(user_id)
+    FOREIGN KEY (user_type_id) REFERENCES user_types(user_type_id),
+    FOREIGN KEY (user_id) REFERENCES users(user_id),
     FOREIGN KEY (venue_id) REFERENCES venues(venue_id)
 );

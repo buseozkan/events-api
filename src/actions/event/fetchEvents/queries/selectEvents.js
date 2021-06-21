@@ -1,4 +1,5 @@
 const { submitQuery, camelKeys } = require("~root/lib/database");
+
 const selectEvents = () => submitQuery`
       SELECT 
         event_id, 
