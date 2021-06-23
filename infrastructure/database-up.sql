@@ -87,3 +87,12 @@ CREATE TABLE user_venues(
     FOREIGN KEY (user_id) REFERENCES users(user_id),
     FOREIGN KEY (venue_id) REFERENCES venues(venue_id)
 );
+
+DROP TABLE IF EXISTS feedbacks;
+CREATE TABLE feedbacks(
+    feedback_id int AUTO_INCREMENT PRIMARY KEY,
+    user_name VARCHAR(100) NOT NULL,
+    email VARCHAR(250) UNIQUE NOT NULL,
+    feedback_message VARCHAR(1000),
+    feedback_date DATETIME NOT NULL
+);
