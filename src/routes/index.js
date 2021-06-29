@@ -10,6 +10,7 @@ const deleteVenue = require("../apps/controllers/venues/deleteVenue");
 const login = require("../apps/controllers/users/login/login");
 const register = require("../apps/controllers/users/register/register");
 const auth = require("~root/apps/middlewares/authentication");
+const postPassword = require("~root/apps/controllers/passwords/postPassword");
 
 const router = express.Router();
 
@@ -26,5 +27,8 @@ router.delete("/deleteVenue/:venueId", auth, deleteVenue);
 
 router.post("/login", login);
 router.post("/register", register);
+
+router.post("/forgetpassword", postPassword);
+/*router.post("/feedbacks", feedback);*/
 
 module.exports = router;

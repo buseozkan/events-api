@@ -47,8 +47,7 @@ INSERT INTO user_venues(user_venue_id,user_type_id, user_id,venue_id)
 VALUES(3,1,3,3);
 
 #INSERT INTO feedbacks(user_name,email,feedback_message,feedback_date)
-#VALUES("");
+#VALUES("user1","user@user.com", "feedback message","2021-08-20");
 #INSERT INTO feedbacks(user_name,email,feedback_message,feedback_date)
-#VALUES("");
-#INSERT INTO feedbacks(user_name,email,feedback_message,feedback_date)
-#VALUES("");
+#VALUES("user2", "imauser@user.com","güzel platform", "2021-06-20");
+
