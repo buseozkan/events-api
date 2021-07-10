@@ -1,4 +1,6 @@
+/* eslint-disable eslint-comments/no-unused-disable */
 /* eslint-disable no-undef */
+
 const jwt = require("jsonwebtoken");
 const fetchUser = require("../../../../actions/user/createUser/fetchUser");
 

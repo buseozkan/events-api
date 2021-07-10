@@ -2,12 +2,12 @@
 USE `gibriEvents_db`;
 
 
-INSERT INTO users (first_name, last_name, email, password, city, phone_number)
-VALUES ("Ahmet", "Akinsel", "ahmet@gmail.com",  SHA2(CONCAT("123456","GIBRI_EVENT_APP"), 224),"Lefkosa","05338221133");
-INSERT INTO users (first_name, last_name, email, password, city, phone_number)
-VALUES ("Buse", "Ozkan", "buse@buse.com",  SHA2(CONCAT("123456","GIBRI_EVENT_APP"), 224),"Magusa","05338445566");
-INSERT INTO users (first_name, last_name, email, password, city, phone_number)
-VALUES ("Ahmet", "MısırLı", "ahmet@ahmet.com",  SHA2(CONCAT("123456","GIBRI_EVENT_APP"), 224),"Omorfo","05338554433");
+INSERT INTO users (user_id, first_name, last_name, email, password, city, phone_number)
+VALUES ("1", "Ahmet", "Akinsel", "ahmet@gmail.com",  SHA2(CONCAT("123456","GIBRI_EVENT_APP"), 224),"Lefkosa","05338221133");
+INSERT INTO users (user_id, first_name, last_name, email, password, city, phone_number)
+VALUES ("2", "Buse", "Ozkan", "buse@buse.com",  SHA2(CONCAT("123456","GIBRI_EVENT_APP"), 224),"Magusa","05338445566");
+INSERT INTO users (user_id, first_name, last_name, email, password, city, phone_number)
+VALUES ("3", "Ahmet", "MısırLı", "ahmet@ahmet.com",  SHA2(CONCAT("123456","GIBRI_EVENT_APP"), 224),"Omorfo","05338554433");
 
 INSERT INTO events (event_name, event_artist, event_date, event_city, event_description, address, image)
 VALUES ("Live Music","Ahmet Evan", "2021-07-20", "Lefkosa", "Pop-Rock Live", "Narnia Garden","image");

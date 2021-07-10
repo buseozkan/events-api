@@ -3,7 +3,7 @@ const handleApiError = require("~root/utils/handleApiError");
 
 const postUser = async (req, res) => {
   const {
-    userType,
+    userId,
     firstName,
     lastName,
     email,
@@ -14,7 +14,7 @@ const postUser = async (req, res) => {
 
   try {
     const { user } = await createUser({
-      userType,
+      userId,
       firstName,
       lastName,
       email,

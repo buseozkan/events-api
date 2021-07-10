@@ -1,7 +1,7 @@
 const insertUser = require("./queries/insertUser");
 
 const createUser = async ({
-  userType,
+  userId,
   firstName,
   lastName,
   email,
@@ -10,7 +10,7 @@ const createUser = async ({
   phoneNumber
 }) => {
   const user = await insertUser({
-    userType,
+    userId,
     firstName,
     lastName,
     email,

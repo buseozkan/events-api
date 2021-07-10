@@ -2,7 +2,7 @@ const { submitQuery, camelKeys, getFirst } = require("~root/lib/database");
 
 const selectUser = ({ email, password }) => submitQuery`
     SELECT 
-    user_id, user_type, first_name, last_name, email, city, phone_number
+    user_id, first_name, last_name, email, city, phone_number
     FROM users
 
     WHERE email = ${email}
