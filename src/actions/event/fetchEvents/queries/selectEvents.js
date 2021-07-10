@@ -8,7 +8,6 @@ const selectEvents = () => submitQuery`
         event_city,
         event_description,
         event_date,
-        venue_id, 
         image
       
       FROM events 

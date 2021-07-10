@@ -2,52 +2,65 @@
 USE `gibriEvents_db`;
 
 
-INSERT INTO users (user_id, user_type, first_name, last_name, email, password, city, phone_number)
-VALUES ("1","restaurant","Ahmet", "Akinsql", "ahmet@gmail.com",  SHA2(CONCAT("123456","GIBRI_EVENT_APP"), 224), "Lefkosa", "05338668666");
-INSERT INTO users (user_id, user_type, first_name, last_name, email, password, city, phone_number)
-VALUES ("2","bar","Buse", "Hermione", "buse@buse.com",  SHA2(CONCAT("123456","GIBRI_EVENT_APP"), 224), "Magusa", "05338444444");
-INSERT INTO users (user_id,user_type, first_name, last_name, email, password, city, phone_number)
-VALUES ("3","cinema","Ahmet", "Mısır-x", "ahmet@ahmet.com",  SHA2(CONCAT("123456","GIBRI_EVENT_APP"), 224), "Omorfo", "05338555555");
+INSERT INTO users (first_name, last_name, email, password, city, phone_number)
+VALUES ("Ahmet", "Akinsel", "ahmet@gmail.com",  SHA2(CONCAT("123456","GIBRI_EVENT_APP"), 224),"Lefkoşa","05338221133");
+INSERT INTO users (first_name, last_name, email, password, city, phone_number)
+VALUES ("Buse", "Ozkan", "buse@buse.com",  SHA2(CONCAT("123456","GIBRI_EVENT_APP"), 224),"Magusa","05338445566");
+INSERT INTO users (first_name, last_name, email, password, city, phone_number)
+VALUES ("Ahmet", "MısırLı", "ahmet@ahmet.com",  SHA2(CONCAT("123456","GIBRI_EVENT_APP"), 224),"Omorfo","05338554433");
 
+INSERT INTO events (event_name, event_artist, event_date, event_city, event_description, address, image)
+VALUES ("Live Music","Ahmet Evan", "2021-07-20", "Lefkoşa", "Pop-Rock Live", "Narnia Garden","image");
+INSERT INTO events (event_name, event_artist, event_date, event_city, event_description, address, image)
+VALUES ("Live Music","Rast", "2021-07-25", "Lefkoşa", "Pop-Rock Live", "Narnia Garden","image");
+INSERT INTO events (event_name, event_artist, event_date, event_city, event_description, address, image)
+VALUES ("Privillige at Papa Bar","Dj Privillige", "2021-07-25", "Lefkoşa", "Techno Party", "Papa Bar","image");
+INSERT INTO events (event_name, event_artist, event_date, event_city, event_description, address, image)
+VALUES ("Live Music","Eril Cambaz", "2021-07-28", "Lefkoşa", "Pop-Rock Acustic", "Narnia Garden","image");
+INSERT INTO events (event_name, event_artist, event_date, event_city, event_description, address, image)
+VALUES ("Live Music","Reva", "2021-07-18", "Lefkoşa", "Pop-Rock Live", "Narnia Garden","image");
 
-INSERT INTO venues (venue_id, name, description, city, phone_number,work_hours,facebook, instagram, twitter, image)
-VALUES (1, "narnia", "pub and live music", "Lefkosa", "0533845552233","20:00-02:00", "www.facebook.com/narnia", "www.instagram.com/narnia", "www.twitter.com/narnia","narnia.jpg" );
-INSERT INTO venues (venue_id, name, description, city, phone_number,work_hours,facebook, instagram, twitter, image)
-VALUES (2, "shamrock", "bar and live music", "Magusa", "0533845552244","21:00-02:00", "www.facebook.com/shamrock", "www.instagram.com/shamrock", "www.twitter.com/shamrock","shamrock.jpg" );
+INSERT INTO events (event_name, event_artist, event_date, event_city, event_description, address, image)
+VALUES ("Reggea Concert","SensiJam", "2021-08-01", "Magusa", "Reggea Night", "Bedis Beach","image");
+INSERT INTO events (event_name, event_artist, event_date, event_city, event_description, address, image)
+VALUES ("Reggea Concert","Bunfyah", "2021-07-15", "Magusa", "Reggea Night", "Bedis Beach","image");
+INSERT INTO events (event_name, event_artist, event_date, event_city, event_description, address, image)
+VALUES ("Live Music","Fikri Karayel", "2021-08-15", "Magusa", "Live Music", "Shamrock Bar","image");
+INSERT INTO events (event_name, event_artist, event_date, event_city, event_description, address, image)
+VALUES ("Live Music","Ezgi Akgurgen", "2021-08-10", "Magusa", "Acustic Live Music", "DeMolay Bar","image");
+INSERT INTO events (event_name, event_artist, event_date, event_city, event_description, address, image)
+VALUES ("Electronic Music","Atesh", "2021-08-01", "Magusa", "Electronic Music", "Monks-inn","image");
 
-INSERT INTO venues (venue_id, name, description, city, phone_number,work_hours,facebook, instagram, twitter, image)
-VALUES (3, "cage club", "electronic music", "Girne", "0533845552255","22:00-02:00", "www.facebook.com/cage", "www.instagram.com/cage", "www.twitter.com/cage","cage.jpg" );
+INSERT INTO events (event_name, event_artist, event_date, event_city, event_description, address, image)
+VALUES ("Reggea Concert","MishaRoots", "2021-08-15", "Girne", "Reggea Night", "Bedis Beach","image");
+INSERT INTO events (event_name, event_artist, event_date, event_city, event_description, address, image)
+VALUES ("Jazz Concert","Todds and Friends", "2021-07-28", "Girne", "Jazz Night", "Baromonte","image");
+INSERT INTO events (event_name, event_artist, event_date, event_city, event_description, address, image)
+VALUES ("Live Music","Nafiz Dölek", "2021-08-15", "Girne", "Live Music", "Papageno Bar","image");
+INSERT INTO events (event_name, event_artist, event_date, event_city, event_description, address, image)
+VALUES ("Live Music","Organic Pixel", "2021-07-28", "Girne", "Live Music", "Soulist Cafe-Bar","image");
+INSERT INTO events (event_name, event_artist, event_date, event_city, event_description, address, image)
+VALUES ("Jazz Concert","Cahit Kutrafalı Trio", "2021-08-01", "Girne", "Jazz Night", "Monks-inn","image");
 
+INSERT INTO events (event_name, event_artist, event_date, event_city, event_description, address, image)
+VALUES ("Reggea Concert","MishaRoots", "2021-08-30", "Güzelyurt", "Reggea Night", "Güzelyurt Plajı","image");
+INSERT INTO events (event_name, event_artist, event_date, event_city, event_description, address, image)
+VALUES ("Electronic Music","Dj Coşkuner", "2021-08-01", "Güzelyurt", "90s Pop", "B Bar","image");
+INSERT INTO events (event_name, event_artist, event_date, event_city, event_description, address, image)
+VALUES ("Live Music","Oğulcan Başarı", "2021-08-18", "Güzelyurt", "Live Music", "A Bar","image");
+INSERT INTO events (event_name, event_artist, event_date, event_city, event_description, address, image)
+VALUES ("Live Music","Dilar Ferit", "2021-07-28", "Güzelyurt", "Live Music", "Pizza Vira","image");
+INSERT INTO events (event_name, event_artist, event_date, event_city, event_description, address, image)
+VALUES ("Live Music","Osman Tuğsal", "2021-08-07", "Güzelyurt", "Live Music", "C Bar","image");
 
-INSERT INTO events (event_id, event_name, event_artist,venue_id, event_date, event_city, event_description, address, image)
-VALUES ("1","Bob Marley Tribute Night","sensiJam", "1", "2020-09-20", "Girne", "daha güzel event", "X Bar","image");
-INSERT INTO events (event_id, event_name, event_artist,venue_id, event_date, event_city, event_description, address, image)
-VALUES ("2","Bob Dylan Tribute Night", "ahmetGaraçoçço", "2", "2020-07-20", "Lefkosa","kötü event", "Y Bar","image");
-INSERT INTO events (event_id, event_name, event_artist,venue_id, event_date, event_city, event_description, address, image)
-VALUES ("3","Bob Ross Drawing Night", "sexyJam", "3", "2020-08-20", "Magusa", "güzel event", "Z Bar","image");
-
-
-INSERT INTO event_histories (event_history_id, venue_id, user_id, event_id, event_name, event_date)
-VALUES("1","2","2","1","Bob Dylan Tribute Night","2020-07-20");
-INSERT INTO event_histories (event_history_id, venue_id, user_id, event_id, event_name, event_date)
-VALUES("2","1","3","1","Bob Marley Tribute Night","2020-09-20");
-INSERT INTO event_histories (event_history_id, venue_id, user_id, event_id, event_name, event_date)
-VALUES("3","3","1","3","Bob Ross Drawing Night","2020-08-20");
-
-INSERT INTO user_types(user_type_id,`type`)
-VALUES(1,"Admin");
-INSERT INTO user_types(user_type_id,`type`)
-VALUES(2,"Guest");
-
-INSERT INTO user_venues(user_venue_id,user_type_id,user_id,venue_id)
-VALUES(1,1,1,1);
-INSERT INTO user_venues(user_venue_id,user_type_id,user_id,venue_id)
-VALUES(2,2,2,2);
-INSERT INTO user_venues(user_venue_id,user_type_id, user_id,venue_id)
-VALUES(3,1,3,3);
-
-#INSERT INTO feedbacks(user_name,email,feedback_message,feedback_date)
-#VALUES("user1","user@user.com", "feedback message","2021-08-20");
-#INSERT INTO feedbacks(user_name,email,feedback_message,feedback_date)
-#VALUES("user2", "imauser@user.com","güzel platform", "2021-06-20");
+INSERT INTO events (event_name, event_artist, event_date, event_city, event_description, address, image)
+VALUES ("Reggea Concert","The Healers", "2021-08-22", "İskele", "Reggea Night", "İskele Plajı","image");
+INSERT INTO events (event_name, event_artist, event_date, event_city, event_description, address, image)
+VALUES ("Electronic Music","Zildji", "2021-08-09", "İskele", "Electronic Dance Music", "Machenzi Beach","image");
+INSERT INTO events (event_name, event_artist, event_date, event_city, event_description, address, image)
+VALUES ("Live Music","Ahmet Evan", "2021-08-18", "İskele", "Live Music", "Royal Bar","image");
+INSERT INTO events (event_name, event_artist, event_date, event_city, event_description, address, image)
+VALUES ("Electronic Music","OneBlood", "2021-07-20", "İskele", "Trap Music", "İskele Beach","image");
+INSERT INTO events (event_name, event_artist, event_date, event_city, event_description, address, image)
+VALUES ("Live Music","Osman Tuğsal", "2021-08-16", "İskele", "Live Music", "Royal Bar","image");
 

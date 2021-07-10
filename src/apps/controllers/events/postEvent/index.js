@@ -1,5 +1,6 @@
 const createEvent = require("~root/actions/event/createEvent/index");
 const handleApiError = require("~root/utils/handleApiError/index");
+const postEventSchema = require("~root/apps/controllers/events/postEvent/schemas/postEventSchema");
 
 const postEvent = async (req, res) => {
   const { userId } = req.user;
@@ -7,7 +8,6 @@ const postEvent = async (req, res) => {
   const {
     eventName,
     eventArtist,
-    venueId,
     eventDate,
     eventCity,
     eventDescription,
@@ -16,7 +16,7 @@ const postEvent = async (req, res) => {
 
   try {
     await postEventSchema.validate(
-      { userId, venueId },
+      { userId },
       {
         abortEarly: false
       }
@@ -24,7 +24,6 @@ const postEvent = async (req, res) => {
     const { event } = await createEvent({
       eventName,
       eventArtist,
-      venueId,
       eventDate,
       eventCity,
       eventDescription,
