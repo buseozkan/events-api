@@ -28,7 +28,7 @@ CREATE TABLE events(
     event_id int AUTO_INCREMENT PRIMARY KEY,
     event_name VARCHAR(200) NOT NULL,
     event_artist VARCHAR(50) NOT NULL,
-    event_date DATETIME NOT NULL,
+    event_date DATE NOT NULL,
     event_city VARCHAR(50) NOT NULL,
     event_description VARCHAR(200),
     address VARCHAR(50),
